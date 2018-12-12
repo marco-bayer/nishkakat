@@ -1,3 +1,5 @@
-<ul>
-  <li *ngFor="let character of (characters$ | async)">{{ character.name }}</li>
+<ul class="characters">
+  <li *ngFor="let character of (characters$ | async)">
+      <span class="badge">{{character.id}}</span>{{ character.name }}
+  </li>
 </ul>
