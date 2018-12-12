@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxsModule } from '@ngxs/store';
 import { CharactersComponent } from './characters/characters.component';
 import { CharactersState } from './characters/state/state';
+import { CombatDesignerComponent } from './combat-designer/combat-designer.component';
+import { PartyComponent } from './party/party.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharactersComponent
+    CharactersComponent,
+    CombatDesignerComponent,
+    PartyComponent
   ],
   imports: [
     BrowserModule,

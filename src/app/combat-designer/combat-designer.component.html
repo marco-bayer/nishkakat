@@ -1,0 +1,12 @@
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+      <app-characters></app-characters>
+    </div>
+    <div class="mdc-layout-grid__cell">
+      <div *ngFor="let party of (parties$ | async)">
+        <app-party [party]=party></app-party>
+      </div>
+    </div>
+  </div>
+</div>
