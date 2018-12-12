@@ -1,5 +1,5 @@
-import { Character } from './Character';
-import { Zustaende } from './Zustaende';
+import { Character } from './character.model';
+import { Zustaende } from './combatantState.model';
 
 export class Combatant {
   character: Character;

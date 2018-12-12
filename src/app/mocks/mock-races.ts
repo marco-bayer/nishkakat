@@ -1,4 +1,4 @@
-import { Race } from '../model/Race';
+import { Race } from '../model/race.model';
 
 export const MENSCH: Race = {id: 1, name: 'Mensch', modLebenspunkte: 5, modSeelenkraft: -5, modZaehigkeit: -5, geschwindigkeit: 8, ap: 0};
 export const ELF: Race = {id: 2, name: 'Elf', modLebenspunkte: 2, modSeelenkraft: -4, modZaehigkeit: -6, geschwindigkeit: 8, ap: 0};

@@ -1,5 +1,5 @@
 import { CharacterService } from './../../service/character.service';
-import { Character } from './../../model/Character';
+import { Character } from '../../model/character.model';
 import { CharactersFetched } from './../actions/actions';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LoadCharacters } from '../actions/actions';

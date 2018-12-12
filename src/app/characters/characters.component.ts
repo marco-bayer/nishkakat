@@ -1,4 +1,4 @@
-import { Character } from './../model/Character';
+import { Character } from '../model/character.model';
 import { LoadCharacters } from './actions/actions';
 import { Component, OnInit } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
