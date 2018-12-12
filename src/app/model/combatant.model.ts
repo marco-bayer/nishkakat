@@ -1,10 +1,10 @@
 import { Character } from './character.model';
-import { Zustaende } from './combatantState.model';
+import { CombatantStates } from './combatantState.model';
 
 export class Combatant {
   character: Character;
   initiativeWurf: number | 0;
-  zustaende: Zustaende;
+  zustaende: CombatantStates;
 
   hasActed: boolean;
 

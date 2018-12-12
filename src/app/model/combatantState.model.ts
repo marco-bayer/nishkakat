@@ -1,4 +1,4 @@
-export class Zustaende {
+export class CombatantStates {
 
   getIniChange(): number {
     // TODO: Veränderungen der Initiative durch Zustände entwickeln
