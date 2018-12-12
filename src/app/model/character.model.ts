@@ -1,4 +1,4 @@
-import { Race } from './Race';
+import { Race } from './race.model';
 
 export class Character {
   // organisational
