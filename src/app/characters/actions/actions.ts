@@ -1,4 +1,5 @@
-import { Character } from './../../model/Character';
+import { Character } from '../../model/character.model';
+
 export class LoadCharacters {
   static readonly type = '[Character] LoadCharacters';
 }

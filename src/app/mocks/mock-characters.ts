@@ -1,5 +1,5 @@
-import { CharacterType } from './../model/Character';
-import { Character } from '../model/Character';
+import { CharacterType } from '../model/character.model';
+import { Character } from '../model/character.model';
 import { MENSCH, ELF, HALBELF, ZWERG } from './mock-races';
 
 export const CHARACTERS: Character[] = [

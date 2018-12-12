@@ -1,4 +1,4 @@
-import { Character } from './../model/Character';
+import { Character } from '../model/character.model';
 import { Injectable } from '@angular/core';
 import { CHARACTERS } from '../mocks/mock-characters';
 
