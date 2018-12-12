@@ -1,3 +1,5 @@
+import { CharacterService } from './../../service/character.service';
+import { Character } from './../../model/Character';
 import { CharactersFetched } from './../actions/actions';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { LoadCharacters } from '../actions/actions';
@@ -5,18 +7,19 @@ import { state } from '@angular/animations';
 
 export interface CharactersStateModel {
   loading: boolean;
-  list: string[];
+  list: Character[];
 }
 
 @State<CharactersStateModel>({
   name: 'characters',
   defaults: {
     loading: false,
-    list: ['Hans']
+    list: []
   }
 })
 export class CharactersState {
 
+  constructor(private characterService: CharacterService) {}
 
   @Action(LoadCharacters)
   listCharacters(ctx: StateContext<CharactersStateModel>) {
@@ -27,8 +30,7 @@ export class CharactersState {
       list: []
     });
 
-    // TODO: call service to retrieve data
-    const result = ['Marco', 'Peter', 'Sabine', 'Tian'];
+    const result = this.characterService.getCharacterList();
 
     return ctx.dispatch(
       new CharactersFetched(result)

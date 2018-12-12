@@ -1,5 +1,3 @@
-<span *ngIf="(loading$ | async)">Load characters</span>
-<span *ngIf="!(loading$ | async)">geladen</span>
 <ul>
-  <li *ngFor="let character of characters$ | async">{{ character }}</li>
+  <li *ngFor="let character of (characters$ | async)">{{ character.name }}</li>
 </ul>

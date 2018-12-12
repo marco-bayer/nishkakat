@@ -1,3 +1,4 @@
+import { Character } from './../model/Character';
 import { LoadCharacters } from './actions/actions';
 import { Component, OnInit } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
@@ -11,7 +12,7 @@ import { tap } from 'rxjs/operators';
 })
 export class CharactersComponent implements OnInit {
   @Select(state => state.characters.loading) loading$: Observable<boolean>;
-  @Select(state => state.characters.list) characters$: Observable<string[]>;
+  @Select(state => state.characters.list) characters$: Observable<Character[]>;
 
   constructor(private store: Store) {}
 
