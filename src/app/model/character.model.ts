@@ -36,14 +36,14 @@ export class Character {
     rasse: Race,
     characterType: CharacterType,
     isHero: boolean,
-    mut?: number | 8,
-    klugheit?: number | 8,
-    intuition?: number | 8,
-    charisma?: number | 8,
-    fingerfertigkeit?: number | 8,
-    gewandheit?: number | 8,
-    konstitution?: number | 8,
-    koerperkraft?: number | 8
+    mut?: number,
+    klugheit?: number,
+    intuition?: number,
+    charisma?: number,
+    fingerfertigkeit?: number,
+    gewandheit?: number,
+    konstitution?: number,
+    koerperkraft?: number
   ) {
     this.id = id;
     this.name = name;
@@ -51,14 +51,14 @@ export class Character {
     this.characterType = characterType;
     this.isHero = isHero;
     // assign attributes
-    this.mut = mut;
-    this.klugheit = klugheit;
-    this.intuition = intuition;
-    this.charisma = charisma;
-    this.fingerfertigkeit = fingerfertigkeit;
-    this.gewandheit = gewandheit;
-    this.konstitution = konstitution;
-    this.koerperkraft = koerperkraft;
+    mut != null ? this.mut = mut : this.mut = 8;
+    klugheit != null ? this.klugheit = klugheit : this.klugheit = 8;
+    intuition != null ? this.intuition = intuition : this.intuition = 8;
+    charisma != null ? this.charisma = charisma : this.charisma = 8;
+    fingerfertigkeit != null ? this.fingerfertigkeit = fingerfertigkeit : this.fingerfertigkeit = 8;
+    gewandheit != null ? this.gewandheit = gewandheit : this.gewandheit = 8;
+    konstitution != null ? this.konstitution = konstitution : this.konstitution = 8;
+    koerperkraft != null ? this.koerperkraft = koerperkraft : this.koerperkraft = 8;
 
     // calculate values
     this.ausweichen = Math.round(this.gewandheit / 2);

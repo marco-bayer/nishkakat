@@ -3,15 +3,17 @@ import { CombatantStates } from './combatantState.model';
 
 export class Combatant {
   character: Character;
-  initiativeWurf: number | 0;
+  initiativeWurf = 0;
   zustaende: CombatantStates;
 
   hasActed: boolean;
 
-  noOfParriesInCurrentRound: number | 0;
+  noOfParriesInCurrentRound;
 
   constructor(character: Character) {
     this.character = character;
+    this.hasActed = false;
+    this.noOfParriesInCurrentRound = 0;
   }
 
   getInitiative(): number {
@@ -37,12 +39,12 @@ export class Combatant {
     this.initiativeWurf = Math.floor(Math.random() * 0.999999 * 6) + 1;
   }
 
-  canParry(): boolean {
-    return this.character.isHero || this.noOfParriesInCurrentRound < 1;
+  allowedToParry(): boolean {
+    return (this.character.isHero || this.noOfParriesInCurrentRound < 1);
   }
 
   parry(): boolean {
-    if (this.canParry) {
+    if (this.allowedToParry()) {
       this.noOfParriesInCurrentRound++;
       return true;
     } else {
