@@ -1,4 +1,5 @@
-import { Character } from './Character';
+import { Character } from './character.model';
+
 export interface Party {
   name: string;
   combatants: Character[];
