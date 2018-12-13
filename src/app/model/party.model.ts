@@ -1,6 +1,9 @@
 import { Combatant } from './combatant.model';
 
-export interface Party {
+export class Party {
+  constructor() {
+    this.combatants = new Array();
+  }
   name: string;
   combatants: Combatant[];
 }

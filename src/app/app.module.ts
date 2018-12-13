@@ -1,3 +1,5 @@
+import { environment } from './../environments/environment.prod';
+import { CombatDesignerStateModel, CombatDesignerState } from './combat-designer/state/state';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -29,8 +31,9 @@ import { CombatManagerComponent } from './combat-manager/combat-manager.componen
     MatTabsModule,
     MatGridListModule,
     NgxsModule.forRoot([
-      CharactersState
-    ]),
+      CharactersState,
+      CombatDesignerState
+    ], { developmentMode: !environment.production }),
     AppRoutingModule
   ],
   providers: [],
