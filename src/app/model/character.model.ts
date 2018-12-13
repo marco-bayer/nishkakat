@@ -82,3 +82,6 @@ export enum CharacterType {
   Beast,
   Supernatural
 }
+
+export const GOOD_CHARACTER_TYPES = [CharacterType.Player, CharacterType.Ally];
+export const EVIL_CHARACTER_TYPES = [CharacterType.Enemy, CharacterType.Beast, CharacterType.Supernatural];

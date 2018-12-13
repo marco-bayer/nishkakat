@@ -1,3 +1,4 @@
+import { CombatDesignerStateModel } from './combat-designer/state/state';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -23,7 +24,8 @@ import { PartiesComponent } from './parties/parties.component';
     BrowserModule,
     BrowserAnimationsModule,
     NgxsModule.forRoot([
-      CharactersState
+      CharactersState,
+      CombatDesignerStateModel
     ])
   ],
   providers: [],
