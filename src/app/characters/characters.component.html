@@ -1,5 +1,7 @@
+<h3>Kämpfer</h3>
 <ul class="characters">
   <li *ngFor="let character of (characters$ | async)">
-      <span class="badge">{{character.id}}</span>{{ character.name }}
+      <span class="badge {{getCharacterTypeCssClass(character.characterType)}}">{{character.id}}</span>
+      {{ character.name }}<span class="additionalInfo"> - {{ character.initiative }}</span>
   </li>
 </ul>

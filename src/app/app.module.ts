@@ -22,7 +22,7 @@ import { PartyComponent } from './party/party.component';
     BrowserAnimationsModule,
     NgxsModule.forRoot([
       CharactersState
-    ])
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
