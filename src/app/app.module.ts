@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule, MatSidenavModule } from '@angular/material';
+import { MatTabsModule, MatGridListModule } from '@angular/material';
 
 import { NgxsModule } from '@ngxs/store';
 import { CharactersComponent } from './characters/characters.component';
@@ -27,7 +27,7 @@ import { CombatManagerComponent } from './combat-manager/combat-manager.componen
     BrowserModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatSidenavModule,
+    MatGridListModule,
     NgxsModule.forRoot([
       CharactersState
     ]),
