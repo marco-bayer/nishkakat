@@ -38,4 +38,4 @@ import { CombatManagerComponent } from './combat-manager/combat-manager.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
