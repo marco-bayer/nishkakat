@@ -10,6 +10,7 @@ import { CharactersState } from './characters/state/state';
 import { CombatDesignerComponent } from './combat-designer/combat-designer.component';
 import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PartiesComponent } from './parties/parties.component';
     NgxsModule.forRoot([
       CharactersState
     ]),
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
