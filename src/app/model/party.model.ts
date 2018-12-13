@@ -1,6 +1,6 @@
-import { Character } from './character.model';
+import { Combatant } from './combatant.model';
 
 export interface Party {
   name: string;
-  combatants: Character[];
+  combatants: Combatant[];
 }

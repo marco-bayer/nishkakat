@@ -9,13 +9,15 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharactersState } from './characters/state/state';
 import { CombatDesignerComponent } from './combat-designer/combat-designer.component';
 import { PartyComponent } from './party/party.component';
+import { PartiesComponent } from './parties/parties.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CombatDesignerComponent,
-    PartyComponent
+    PartyComponent,
+    PartiesComponent
   ],
   imports: [
     BrowserModule,
