@@ -62,29 +62,29 @@
   border-radius: 0 4px 4px 0;
 }
 
-.characters .characterType-0 {
+.characters .character-type-0 {
   background-color: #14CC87;
-  color: black;
+  color: white;
 }
 
-.characters .characterType- {
+.characters .character-type-1 {
   background-color: #1490CC;
-  color: black;
+  color: white;
 }
 
-.characters .enemy {
+.characters .character-type-2 {
   background-color: #CC1429;
   color: white;
 }
 
-.characters .beast {
-  background-color: #FF5540;
+.characters .character-type-3 {
+  background-color: #FF992B;
   color: white;
 }
 
-.characters .supernatural {
-  background-color: #CC14FF;
-  color: black;
+.characters .character-type-4 {
+  background-color: #665F8B;
+  color: white;
 }
 
 .characters .additionalInfo{

@@ -19,27 +19,4 @@ export class CharactersComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new LoadCharacters());
   }
-
-  getCharacterTypeCssClass(characterType: CharacterType): string {
-    switch (characterType) {
-      case CharacterType.Player:
-        return 'player';
-        break;
-      case CharacterType.Ally:
-        return 'ally';
-        break;
-      case CharacterType.Enemy:
-        return 'enemy';
-        break;
-      case CharacterType.Beast:
-        return 'beast';
-        break;
-      case CharacterType.Supernatural:
-        return 'supernatural';
-        break;
-      default:
-        return 'enemy';
-        break;
-    }
-  }
 }
