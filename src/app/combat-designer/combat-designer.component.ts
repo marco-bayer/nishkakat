@@ -1,5 +1,7 @@
+import { AddCharacterToParty } from './actions/actions';
+import { Character } from './../model/character.model';
 import { Observable } from 'rxjs';
-import { Select } from '@ngxs/store';
+import { Select, Store } from '@ngxs/store';
 import { Party } from './../model/party.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -12,9 +14,13 @@ export class CombatDesignerComponent implements OnInit {
 
   @Select(state => state.combatdesigner.parties) parties$: Observable<Party[]>;
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit() {
+  }
+
+  addCharacterToParty(character: Character) {
+    this.store.dispatch(new AddCharacterToParty(character));
   }
 
 }

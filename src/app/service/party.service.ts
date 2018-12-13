@@ -27,6 +27,7 @@ export class PartyService {
 
     if (party == null) {
       party = new Party();
+      party.name = 'Party ' + (parties.length + 1);
       parties.push(party);
     }
 

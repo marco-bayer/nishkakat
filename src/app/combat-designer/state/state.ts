@@ -16,7 +16,7 @@ export class CombatDesignerStateModel {
     parties: []
   }
 })
-export class CombatDesigner {
+export class CombatDesignerState {
   constructor(private partyService: PartyService) {}
 
   @Action(AddCharacterToParty)
@@ -24,6 +24,7 @@ export class CombatDesigner {
     ctx: StateContext<CombatDesignerStateModel>,
     action: AddCharacterToParty
   ) {
+    console.log('Add character to party', action.character);
     const state = ctx.getState();
     const newParties = this.partyService.addCharacterToParty(
       action.character,

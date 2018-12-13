@@ -35,9 +35,7 @@
 .characters .badge {
   display: inline-block;
   font-size: small;
-  color: white;
   padding: 0.8em 0.7em 0 0.7em;
-  background-color: #607D8B;
   line-height: 1em;
   position: relative;
   left: -1px;
@@ -47,4 +45,49 @@
   text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+
+.characters .postbadge {
+  display: inline-block;
+  font-size: small;
+  padding: 0.8em 0.7em 0 0.7em;
+  line-height: 1em;
+  position: relative;
+  right: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 0 4px 4px 0;
+}
+
+.characters .character-type-0 {
+  background-color: #14CC87;
+  color: white;
+}
+
+.characters .character-type-1 {
+  background-color: #1490CC;
+  color: white;
+}
+
+.characters .character-type-2 {
+  background-color: #CC1429;
+  color: white;
+}
+
+.characters .character-type-3 {
+  background-color: #FF992B;
+  color: white;
+}
+
+.characters .character-type-4 {
+  background-color: #665F8B;
+  color: white;
+}
+
+.characters .additionalInfo{
+  color: grey;
+  font-size: x-small;
 }
