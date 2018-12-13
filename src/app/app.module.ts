@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule, MatSidenavModule } from '@angular/material';
 
 import { NgxsModule } from '@ngxs/store';
 import { CharactersComponent } from './characters/characters.component';
@@ -11,6 +12,7 @@ import { CombatDesignerComponent } from './combat-designer/combat-designer.compo
 import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CombatManagerComponent } from './combat-manager/combat-manager.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +20,18 @@ import { AppRoutingModule } from './app-routing.module';
     CharactersComponent,
     CombatDesignerComponent,
     PartyComponent,
-    PartiesComponent
+    PartiesComponent,
+    CombatManagerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatTabsModule,
+    MatSidenavModule,
     NgxsModule.forRoot([
       CharactersState
     ]),
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
