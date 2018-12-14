@@ -43,4 +43,4 @@ import { CharacterDesignerComponent } from './character-designer/character-desig
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
