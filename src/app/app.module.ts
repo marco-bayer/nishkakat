@@ -15,6 +15,8 @@ import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
+import { CharacterComponent } from './character/character.component';
+import { CharacterDesignerComponent } from './character-designer/character-designer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CombatManagerComponent } from './combat-manager/combat-manager.componen
     CombatDesignerComponent,
     PartyComponent,
     PartiesComponent,
-    CombatManagerComponent
+    CombatManagerComponent,
+    CharacterComponent,
+    CharacterDesignerComponent
   ],
   imports: [
     BrowserModule,

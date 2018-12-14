@@ -1,14 +1,11 @@
-<h3>Teilnehmer</h3>
-
-<mat-grid-list cols="4" rowHeight="500px">
-  <mat-grid-tile colspan="1" rowspan="1">
-    <ul class="characters">
-      <li *ngFor="let character of (characters$ | async)" (click)="onSelectCharacter(character)">
-        <span class="badge character-type-{{character.characterType}}">{{ character.id }}</span> {{ character.name }}
-      </li>
-    </ul>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="3" rowspan="1">
-    <router-outlet></router-outlet>
-  </mat-grid-tile>
-</mat-grid-list>
+<ul class="characters">
+  <li
+    *ngFor="let character of (characters$ | async)"
+    (click)="onSelectCharacter(character)"
+  >
+    <span class="badge character-type-{{character.characterType}}">{{
+      character.id
+    }}</span>
+    {{ character.name }}
+  </li>
+</ul>
