@@ -24,11 +24,10 @@ export class CombatDesignerState {
     ctx: StateContext<CombatDesignerStateModel>,
     action: AddCharacterToParty
   ) {
-    console.log('Add character to party', action.character);
-    const state = ctx.getState();
+    const currentParties = JSON.parse(JSON.stringify(ctx.getState().parties));
     const newParties = this.partyService.addCharacterToParty(
       action.character,
-      state.parties
+      currentParties
     );
     ctx.patchState({
       parties: newParties

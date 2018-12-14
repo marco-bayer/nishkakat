@@ -1,5 +1,8 @@
-import { environment } from './../environments/environment.prod';
-import { CombatDesignerStateModel, CombatDesignerState } from './combat-designer/state/state';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { environment } from './../environments/environment';
+import {
+  CombatDesignerState
+} from './combat-designer/state/state';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +18,7 @@ import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 
 @NgModule({
   declarations: [
@@ -30,11 +34,16 @@ import { CombatManagerComponent } from './combat-manager/combat-manager.componen
     BrowserAnimationsModule,
     MatTabsModule,
     MatGridListModule,
-    NgxsModule.forRoot([
-      CharactersState,
-      CombatDesignerState
-    ], { developmentMode: !environment.production }),
-    AppRoutingModule
+    NgxsModule.forRoot([CharactersState, CombatDesignerState], {
+      developmentMode: !environment.production
+    }),
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    }),
+    AppRoutingModule,
+    NgxsLoggerPluginModule.forRoot({
+      disabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

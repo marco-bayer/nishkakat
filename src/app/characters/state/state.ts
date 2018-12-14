@@ -23,7 +23,6 @@ export class CharactersState {
 
   @Action(LoadCharacters)
   listCharacters(ctx: StateContext<CharactersStateModel>) {
-    console.log('list characters');
     ctx.setState({
       ...state,
       loading: true,
@@ -39,7 +38,6 @@ export class CharactersState {
 
   @Action(CharactersFetched)
   updateFetchedCharacters(ctx: StateContext<CharactersStateModel>, action: CharactersFetched) {
-    console.log('update characters', action.characters);
     ctx.setState({
       ...state,
       loading: false,
