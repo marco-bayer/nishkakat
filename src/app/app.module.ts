@@ -1,11 +1,23 @@
 import { environment } from './../environments/environment.prod';
-import { CombatDesignerStateModel, CombatDesignerState } from './combat-designer/state/state';
+import {
+  CombatDesignerStateModel,
+  CombatDesignerState
+} from './combat-designer/state/state';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule, MatGridListModule } from '@angular/material';
+import {
+  MatTabsModule,
+  MatGridListModule,
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule, MatInputModule, MatSelectModule, MatRadioModule, MatCardModule
+} from '@angular/material';
+
 
 import { NgxsModule } from '@ngxs/store';
 import { CharactersComponent } from './characters/characters.component';
@@ -17,6 +29,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterDesignerComponent } from './character-designer/character-designer.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MyFormComponent } from './my-form/my-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,18 +42,29 @@ import { CharacterDesignerComponent } from './character-designer/character-desig
     PartiesComponent,
     CombatManagerComponent,
     CharacterComponent,
-    CharacterDesignerComponent
+    CharacterDesignerComponent,
+    MyFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatTabsModule,
     MatGridListModule,
-    NgxsModule.forRoot([
-      CharactersState,
-      CombatDesignerState
-    ], { developmentMode: !environment.production }),
-    AppRoutingModule
+    NgxsModule.forRoot([CharactersState, CombatDesignerState], {
+      developmentMode: !environment.production
+    }),
+    AppRoutingModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
