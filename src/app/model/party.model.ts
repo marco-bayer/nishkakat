@@ -3,7 +3,7 @@ import { Group } from './group.model';
 export class Party extends Group {
   constructor() {
     super();
-    this.combatants = new Array();
+    this.combatants = [];
   }
 
   groups: Group[];

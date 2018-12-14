@@ -1,6 +1,6 @@
-import { environment } from './../environments/environment.prod';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+import { environment } from './../environments/environment';
 import {
-  CombatDesignerStateModel,
   CombatDesignerState
 } from './combat-designer/state/state';
 import { BrowserModule } from '@angular/platform-browser';
@@ -27,6 +27,7 @@ import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { CharacterComponent } from './character/character.component';
 import { CharacterDesignerComponent } from './character-designer/character-designer.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -53,7 +54,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgxsModule.forRoot([CharactersState, CombatDesignerState], {
       developmentMode: !environment.production
     }),
-    AppRoutingModule,
+
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -65,6 +66,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatRadioModule,
     MatCardModule,
     ReactiveFormsModule
+    NgxsReduxDevtoolsPluginModule.forRoot({
+      disabled: environment.production
+    }),
+    NgxsLoggerPluginModule.forRoot({
+      disabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
