@@ -1,9 +1,10 @@
-import { Combatant } from './combatant.model';
+import { Group } from './group.model';
 
-export class Party {
+export class Party extends Group {
   constructor() {
+    super();
     this.combatants = new Array();
   }
-  name: string;
-  combatants: Combatant[];
+
+  groups: Group[];
 }
