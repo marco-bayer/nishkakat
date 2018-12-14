@@ -18,7 +18,12 @@ import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
+<<<<<<< HEAD
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+=======
+import { CharacterComponent } from './character/character.component';
+import { CharacterDesignerComponent } from './character-designer/character-designer.component';
+>>>>>>> 57a5ad59b05dcac7aa9726a10ecae3f66f480b6d
 
 @NgModule({
   declarations: [
@@ -27,7 +32,9 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
     CombatDesignerComponent,
     PartyComponent,
     PartiesComponent,
-    CombatManagerComponent
+    CombatManagerComponent,
+    CharacterComponent,
+    CharacterDesignerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { tap } from 'rxjs/operators';
 import { AddCharacterToParty } from './actions/actions';
 import { Character } from './../model/character.model';
 import { Observable } from 'rxjs';
@@ -13,8 +14,9 @@ import { Component, OnInit } from '@angular/core';
 export class CombatDesignerComponent implements OnInit {
 
   @Select(state => state.combatdesigner.parties) parties$: Observable<Party[]>;
+  @Select(state => state.characters.list) list$: Observable<Character[]>;
 
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
 
   ngOnInit() {
   }

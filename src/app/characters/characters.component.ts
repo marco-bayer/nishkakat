@@ -1,5 +1,5 @@
 import { Character, CharacterType } from '../model/character.model';
-import { LoadCharacters } from './actions/actions';
+import { LoadCharacters, SelectCharacter } from './actions/actions';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class CharactersComponent implements OnInit {
   @Select(state => state.characters.loading) loading$: Observable<boolean>;
-  @Select(state => state.characters.list) characters$: Observable<Character[]>;
+  @Select(state => state.characters.list) characters$: Observable<boolean>;
 
   @Output() selectCharacter = new EventEmitter<Character>();
 
@@ -23,5 +23,6 @@ export class CharactersComponent implements OnInit {
 
   onSelectCharacter(character: Character): void {
     this.selectCharacter.emit(character);
+    this.store.dispatch(new SelectCharacter(character.id));
   }
 }

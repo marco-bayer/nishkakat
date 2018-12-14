@@ -6,6 +6,9 @@ import { CHARACTERS } from '../mocks/mock-characters';
   providedIn: 'root'
 })
 export class CharacterService {
+  getCharacter(id: number): Character {
+    return CHARACTERS.find(character => character.id === id);
+  }
 
   constructor() { }
 
