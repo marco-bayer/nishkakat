@@ -65,7 +65,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     NgxsReduxDevtoolsPluginModule.forRoot({
       disabled: environment.production
     }),
