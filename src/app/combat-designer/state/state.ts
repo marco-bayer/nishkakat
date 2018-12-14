@@ -33,9 +33,22 @@ export class CombatDesignerState {
         action.character,
         parties
       );
+      const usageCountMap = JSON.parse(JSON.stringify(state.usageCountMap));
+      this.incrementUsageCount(usageCountMap, action.character.id);
       ctx.patchState({
-        parties: newParties
+        parties: newParties,
+        usageCountMap: usageCountMap
       });
     }
+  }
+
+  private incrementUsageCount(usageCountMap: any, characterId: number) {
+    let usageCount = usageCountMap[characterId];
+    if (usageCount == null) {
+      usageCount = 1;
+    } else {
+      usageCount++;
+    }
+    usageCountMap[characterId] = usageCount;
   }
 }
