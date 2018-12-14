@@ -31,7 +31,10 @@ export class PartyService {
       parties.push(party);
     }
 
-    if (party.combatants.findIndex(c => c.character.id === character.id) === -1) {
+    if (
+      !character.isHero ||
+      party.combatants.findIndex(c => c.character.id === character.id) === -1
+    ) {
       party.combatants.push(combatant);
     }
 
