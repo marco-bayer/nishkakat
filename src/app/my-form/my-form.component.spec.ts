@@ -1,37 +1,37 @@
-import { LayoutModule } from '@angular/cdk/layout';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatIconModule,
-  MatListModule,
-  MatSidenavModule,
-  MatToolbarModule,
+  MatCardModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
 } from '@angular/material';
 
-import { CombatManagerComponent } from './combat-manager.component';
+import { MyFormComponent } from './my-form.component';
 
-describe('CombatManagerComponent', () => {
-  let component: CombatManagerComponent;
-  let fixture: ComponentFixture<CombatManagerComponent>;
+describe('MyFormComponent', () => {
+  let component: MyFormComponent;
+  let fixture: ComponentFixture<MyFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CombatManagerComponent],
+      declarations: [ MyFormComponent ],
       imports: [
         NoopAnimationsModule,
-        LayoutModule,
+        ReactiveFormsModule,
         MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
+        MatCardModule,
+        MatInputModule,
+        MatRadioModule,
+        MatSelectModule,
       ]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CombatManagerComponent);
+    fixture = TestBed.createComponent(MyFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

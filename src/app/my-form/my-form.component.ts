@@ -1,20 +1,12 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
-import { Character } from '../model/character.model';
-import { Select, Store } from '@ngxs/store';
-import { CharacterService } from '../service/character.service';
-import { Validators, FormBuilder } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-character',
-  templateUrl: './character.component.html',
-  styleUrls: ['./character.component.css']
+  selector: 'app-my-form',
+  templateUrl: './my-form.component.html',
+  styleUrls: ['./my-form.component.css'],
 })
-export class CharacterComponent implements OnInit {
-  @Select(state => state.characters.selectedId) selectedId$: Observable<number>;
-
-  character: Character;
-
+export class MyFormComponent {
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
@@ -30,10 +22,6 @@ export class CharacterComponent implements OnInit {
   });
 
   hasUnitNumber = false;
-
-  constructor(public store: Store, public characterService: CharacterService, private fb: FormBuilder) {}
-
-
 
   states = [
     {name: 'Alabama', abbreviation: 'AL'},
@@ -97,23 +85,9 @@ export class CharacterComponent implements OnInit {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-
+  constructor(private fb: FormBuilder) {}
 
   onSubmit() {
     alert('Thanks!');
   }
-
-  ngOnInit() {
-    this.selectedId$.subscribe(id => this.fetchCharacter(id));
-  }
-
-  fetchCharacter(id: number): void {
-    this.character = this.characterService.getCharacter(id);
-  }
-}
-
-
-
-export class MyFormComponent {
-
 }
