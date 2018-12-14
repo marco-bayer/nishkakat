@@ -2,7 +2,7 @@ import { CharacterType } from '../model/character.model';
 import { Character } from '../model/character.model';
 import { MENSCH, ELF, HALBELF, ZWERG, OTHER } from './mock-races';
 
-export const CHARACTERS: Character[] = [
+export let CHARACTERS: Character[] = [
   new Character(1, 'Batman', MENSCH, CharacterType.Player, true, 13, 13, 13, 13, 13, 15, 15, 15),
   new Character(2, 'Robin', ELF, CharacterType.Ally, true, 12, 12, 14, 14, 14, 15, 14, 14),
   new Character(3, 'Joker', HALBELF, CharacterType.Enemy, true, 14, 15, 13, 13, 12, 16, 15, 12),

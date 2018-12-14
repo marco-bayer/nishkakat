@@ -51,14 +51,20 @@ export class Character {
     this.characterType = characterType;
     this.isHero = isHero;
     // assign attributes
-    mut != null ? this.mut = mut : this.mut = 8;
-    klugheit != null ? this.klugheit = klugheit : this.klugheit = 8;
-    intuition != null ? this.intuition = intuition : this.intuition = 8;
-    charisma != null ? this.charisma = charisma : this.charisma = 8;
-    fingerfertigkeit != null ? this.fingerfertigkeit = fingerfertigkeit : this.fingerfertigkeit = 8;
-    gewandheit != null ? this.gewandheit = gewandheit : this.gewandheit = 8;
-    konstitution != null ? this.konstitution = konstitution : this.konstitution = 8;
-    koerperkraft != null ? this.koerperkraft = koerperkraft : this.koerperkraft = 8;
+    mut != null ? (this.mut = mut) : (this.mut = 8);
+    klugheit != null ? (this.klugheit = klugheit) : (this.klugheit = 8);
+    intuition != null ? (this.intuition = intuition) : (this.intuition = 8);
+    charisma != null ? (this.charisma = charisma) : (this.charisma = 8);
+    fingerfertigkeit != null
+      ? (this.fingerfertigkeit = fingerfertigkeit)
+      : (this.fingerfertigkeit = 8);
+    gewandheit != null ? (this.gewandheit = gewandheit) : (this.gewandheit = 8);
+    konstitution != null
+      ? (this.konstitution = konstitution)
+      : (this.konstitution = 8);
+    koerperkraft != null
+      ? (this.koerperkraft = koerperkraft)
+      : (this.koerperkraft = 8);
 
     // calculate values
     this.ausweichen = Math.round(this.gewandheit / 2);
@@ -73,6 +79,10 @@ export class Character {
       this.rasse.modZaehigkeit;
     this.schicksalspunkte = this.isHero ? 3 : 0;
   }
+
+  setName(name: string): void {
+    this.name = name;
+  }
 }
 
 export enum CharacterType {
@@ -84,4 +94,8 @@ export enum CharacterType {
 }
 
 export const GOOD_CHARACTER_TYPES = [CharacterType.Player, CharacterType.Ally];
-export const EVIL_CHARACTER_TYPES = [CharacterType.Enemy, CharacterType.Beast, CharacterType.Supernatural];
+export const EVIL_CHARACTER_TYPES = [
+  CharacterType.Enemy,
+  CharacterType.Beast,
+  CharacterType.Supernatural
+];

@@ -6,11 +6,17 @@ import { CHARACTERS } from '../mocks/mock-characters';
   providedIn: 'root'
 })
 export class CharacterService {
+  writeCharacter(character: Character): any {
+    const index = CHARACTERS.indexOf(character);
+    if (index !== -1) {
+      CHARACTERS[index] = character;
+    }
+  }
   getCharacter(id: number): Character {
     return CHARACTERS.find(character => character.id === id);
   }
 
-  constructor() { }
+  constructor() {}
 
   getCharacterList(): Character[] {
     return CHARACTERS;
