@@ -7,13 +7,15 @@ import { PartyService } from 'src/app/service/party.service';
 export class CombatDesignerStateModel {
   loading: boolean;
   parties: Party[];
+  usageCountMap: {};
 }
 
 @State<CombatDesignerStateModel>({
   name: 'combatdesigner',
   defaults: {
     loading: false,
-    parties: []
+    parties: [],
+    usageCountMap: {}
   }
 })
 export class CombatDesignerState {
@@ -24,13 +26,16 @@ export class CombatDesignerState {
     ctx: StateContext<CombatDesignerStateModel>,
     action: AddCharacterToParty
   ) {
-    const currentParties = JSON.parse(JSON.stringify(ctx.getState().parties));
-    const newParties = this.partyService.addCharacterToParty(
-      action.character,
-      currentParties
-    );
-    ctx.patchState({
-      parties: newParties
-    });
+    const state = ctx.getState();
+    const parties = JSON.parse(JSON.stringify(state.parties));
+    if (this.partyService.canAdd(action.character, parties)) {
+      const newParties = this.partyService.addCharacterToParty(
+        action.character,
+        parties
+      );
+      ctx.patchState({
+        parties: newParties
+      });
+    }
   }
 }

@@ -16,14 +16,7 @@ export class PartyService {
 
   addCharacterToParty(character: Character, parties: Party[]): Party[] {
     const combatant = new Combatant(character);
-
-    const characterTypeGroup = this.getCharacterTypeGroup(
-      character.characterType
-    );
-
-    let party = parties.find(p =>
-      this.belongCombatantsToTypeGroup(p.combatants, characterTypeGroup)
-    );
+    let party = this.getParty(character, parties);
 
     if (party == null) {
       party = new Party();
@@ -31,15 +24,32 @@ export class PartyService {
       parties.push(party);
     }
 
-    if (
-      !character.isHero ||
-      party.combatants.findIndex(c => c.character.id === character.id) === -1
-    ) {
-      party.combatants.push(combatant);
-    }
+    party.combatants.push(combatant);
 
     return parties;
   }
+
+  canAdd(character: Character, parties: Party[]): boolean {
+    const party = this.getParty(character, parties);
+
+    if (party == null) {
+      return true;
+    }
+
+    return !character.isHero ||
+      party.combatants.findIndex(c => c.character.id === character.id) === -1;
+  }
+
+  private getParty(character: Character, parties: Party[]): Party {
+    const characterTypeGroup = this.getCharacterTypeGroup(
+      character.characterType
+    );
+
+    return parties.find(p =>
+      this.belongCombatantsToTypeGroup(p.combatants, characterTypeGroup)
+    );
+  }
+
 
   private belongCombatantsToTypeGroup(
     combatants: Combatant[],
