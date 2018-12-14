@@ -1,0 +1,93 @@
+.characters {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.characters li {
+  position: relative;
+  cursor: pointer;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.characters li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.characters a {
+  color: #888;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.characters a:hover {
+  color:#607D8B;
+}
+
+.characters .badge {
+  display: inline-block;
+  font-size: small;
+  padding: 0.8em 0.7em 0 0.7em;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.characters .postbadge {
+  display: inline-block;
+  font-size: small;
+  padding: 0.8em 0.7em 0 0.7em;
+  line-height: 1em;
+  position: relative;
+  right: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 0 4px 4px 0;
+}
+
+.characters .character-type-0 {
+  background-color: #14CC87;
+  color: white;
+}
+
+.characters .character-type-1 {
+  background-color: #1490CC;
+  color: white;
+}
+
+.characters .character-type-2 {
+  background-color: #CC1429;
+  color: white;
+}
+
+.characters .character-type-3 {
+  background-color: #FF992B;
+  color: white;
+}
+
+.characters .character-type-4 {
+  background-color: #665F8B;
+  color: white;
+}
+
+.characters .additionalInfo{
+  color: grey;
+  font-size: x-small;
+}

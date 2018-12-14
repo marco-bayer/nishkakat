@@ -30,7 +30,6 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { CharacterComponent } from './character/character.component';
 import { CharacterDesignerComponent } from './character-designer/character-designer.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MyFormComponent } from './my-form/my-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -43,7 +42,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     CombatManagerComponent,
     CharacterComponent,
     CharacterDesignerComponent,
-    MyFormComponent
   ],
   imports: [
     BrowserModule,

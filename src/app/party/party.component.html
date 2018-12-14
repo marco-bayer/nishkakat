@@ -1,5 +1,5 @@
-<p>{{ party.name }}</p>
-<ul>
+<h3>{{ party.name }}</h3>
+<ul class="characters">
   <li *ngFor="let combatant of party.combatants">
     {{ combatant.character.name }}
   </li>
