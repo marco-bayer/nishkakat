@@ -1,10 +1,10 @@
 <div>
   <div>
-    <div>
-      <app-characters (selectCharacter)="addCharacterToParty($event)"></app-characters>
+    <div class="float-left">
+      <app-characters
+        (selectCharacter)="addCharacterToParty($event)"
+      ></app-characters>
     </div>
-    <div>
-      <app-parties [parties]="parties$ | async"></app-parties>
-    </div>
+    <app-parties [parties]="parties$ | async"></app-parties>
   </div>
 </div>
