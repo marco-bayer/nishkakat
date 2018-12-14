@@ -25,7 +25,6 @@ import { CharactersState } from './characters/state/state';
 import { CombatDesignerComponent } from './combat-designer/combat-designer.component';
 import { PartyComponent } from './party/party.component';
 import { PartiesComponent } from './parties/parties.component';
-import { AppRoutingModule } from './app-routing.module';
 import { CombatManagerComponent } from './combat-manager/combat-manager.component';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { CharacterComponent } from './character/character.component';
