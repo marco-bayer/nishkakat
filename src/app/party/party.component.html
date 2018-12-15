@@ -1,6 +1,9 @@
 <h3>{{ party.name }}</h3>
 <ul class="characters">
   <li *ngFor="let combatant of party.combatants">
-    {{ combatant.character.name }}
+      <span class="badge character-type-{{combatant.character.characterType}}">{{
+          combatant.character.id
+        }}</span>
+        {{ combatant.character.name }}
   </li>
 </ul>

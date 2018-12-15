@@ -1,5 +1,5 @@
 import { Character, CharacterType } from '../model/character.model';
-import { LoadCharacters, SelectCharacter } from './actions/actions';
+import { LoadCharacters, SelectCharacter } from './characters.component.actions';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Store, Select } from '@ngxs/store';
 import { Observable } from 'rxjs';

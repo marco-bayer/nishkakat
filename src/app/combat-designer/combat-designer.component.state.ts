@@ -1,5 +1,5 @@
-import { AddCharacterToParty } from './../actions/actions';
-import { Party } from './../../model/party.model';
+import { AddCharacterToParty } from './combat-designer.component.actions';
+import { Party } from '../model/party.model';
 import { State, Action, StateContext } from '@ngxs/store';
 import { createText } from '@angular/core/src/view/text';
 import { PartyService } from 'src/app/service/party.service';

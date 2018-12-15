@@ -1,5 +1,5 @@
 import { tap } from 'rxjs/operators';
-import { AddCharacterToParty } from './actions/actions';
+import { AddCharacterToParty } from './combat-designer.component.actions';
 import { Character } from './../model/character.model';
 import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';

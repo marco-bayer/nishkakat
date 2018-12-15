@@ -1,8 +1,8 @@
-import { CharacterService } from './../../service/character.service';
-import { Character } from '../../model/character.model';
-import { CharactersFetched, SelectCharacter } from './../actions/actions';
+import { CharacterService } from '../service/character.service';
+import { Character } from '../model/character.model';
+import { CharactersFetched, SelectCharacter } from './characters.component.actions';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { LoadCharacters } from '../actions/actions';
+import { LoadCharacters } from './characters.component.actions';
 import { state } from '@angular/animations';
 
 export interface CharactersStateModel {

@@ -2,13 +2,14 @@ import { Character } from './character.model';
 import { CombatantStates } from './combatantState.model';
 
 export class Combatant {
+  id: number;
   character: Character;
   initiativeWurf = 0;
   zustaende: CombatantStates;
 
   hasActed: boolean;
 
-  noOfParriesInCurrentRound;
+  noOfParriesInCurrentRound: number;
 
   constructor(character: Character) {
     this.character = character;
